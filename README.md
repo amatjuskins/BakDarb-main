@@ -4,6 +4,7 @@
 ####  Prerequisites ####
 1.NodeJS
 https://nodejs.org/en/download/
+
 2.Git Bash(Not needed if Manual download)
 https://git-scm.com/downloads
 
