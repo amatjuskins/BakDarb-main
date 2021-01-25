@@ -9,7 +9,7 @@ https://git-scm.com/downloads
 
 
 #### Clone the Project (clones to the current directory) ####
-git clone https://github.com/amatjuskins/BakDarb
+git clone https://github.com/amatjuskins/BakDarb-main
 #### CD to Project folder
 cd ...
 #### Install  ####
@@ -20,3 +20,5 @@ npm run build
 
 #### Executing Tests ####
 npm test
+## On some windows machine this command needs to be use **
+npm run testW

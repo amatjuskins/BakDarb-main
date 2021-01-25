@@ -12,7 +12,9 @@
     "report": "ts-node ./utils/reporter.ts",
     "test": "npm run cucumber ; npm run report",
     "code-coverage-report": "./node_modules/.bin/nyc report --reporter=html",
-    "test-coverage": "npm run test && npm run code-coverage-report"
+    "test-coverage": "npm run test && npm run code-coverage-report",
+    "cucumberW": "cucumber-js ./features/*.feature --require-module ts-node/register --require ./src/*/*.ts --format json:./reports/json/cucumber_report.json",
+    "testW": "npm run pretest && npm run cucumberW && npm run report"
   },
   "devDependencies": {
     "@types/chai": "^4.2.14",
@@ -37,7 +39,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amatjuskins/BakDarb.git"
+    "url": "git+https://github.com/amatjuskins/BakDarb-main.git"
   },
   "keywords": [],
   "nyc": {
