@@ -2,6 +2,8 @@ import { searchPageBing } from '../pages/searchPageBing';
 import { searchPageDuck } from '../pages/searchPageDuck';
 import { page } from '../support/hooks';
 import { Given, Then, When} from "cucumber";
+const chai = require('chai').use(require('chai-as-promised'));
+const expect = chai.expect;
 
 When('I type {string} on Bing', async function(string) {
     await page.sendElementText(searchPageBing.searchTextBox, string);
@@ -20,9 +22,17 @@ When('I click on DuckDuckGo search button', async function (){
 });
 
 Then('The Bing search field is empty', async function () {
-    await page.getElementText(searchPageBing.searchTextBox);
-  });
+    await page.getElementText(searchPageBing.searchTextBox2.toString())
+});
+  
 
   Then('The DuckDuckGo search field is empty', async function () {
-    await page.getElementText(searchPageDuck.searchTextBox);
+    await page.getElementText(searchPageDuck.searchTextBox2.toString())
   });
+
+  Then('The element {string} is found using path {}', async function (string1, string2) {
+    await page.locateElement(string2);
+  });
+
+
+ 

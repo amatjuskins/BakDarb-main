@@ -66,11 +66,38 @@ class PageHelper {
    * @param  {string} element
    * @returns Promise
    */
-  public async getElementText(element:string): Promise<string> {
+  public async locateElement(element: string): Promise<void> {
     let i: number = 0;
     while (i < this.retryCount) {
       try {
-        return await (await this.page.$(element)).toString();
+        await this.page.waitForSelector(element);
+        return await this.page.click(element);
+      } catch (Exception) /* istanbul ignore next */ {
+        try {
+          i++;
+          await this.page.waitForSelector(element);
+          await this.page.evaluate('arguments[0].click()', element);
+          continue;
+        } catch (Exception) /* istanbul ignore next */ {
+          i++;
+          if (i === this.retryCount) {
+            throw new Error(Exception.toString());
+          }
+        }
+      }
+    }
+  }
+
+
+  /**
+   * @param  {string} element
+   * @returns Promise
+   */
+  public async getElementText(element: string): Promise<string> {
+    let i: number = 0;
+    while (i < this.retryCount) {
+      try {
+        return await (await this.page.$(element)).jsonValue();
       } catch (Exception) /* istanbul ignore next */ {
         i++;
         if (i === this.retryCount) {
