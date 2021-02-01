@@ -1,4 +1,4 @@
-import { Browser, ElementHandle, launch, Page, Response } from 'puppeteer';
+import { Browser, launch, Page, Response } from 'puppeteer';
 
 class PageHelper {
   private browser: Browser;

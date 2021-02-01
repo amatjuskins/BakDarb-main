@@ -5,7 +5,6 @@ import testDATA from "../files/testDATA"
 var request = require('request');
 let url;
 let callUrl;
-let resp;
 
 Given('I have base {string}', async function (baseUrl: string) {
     url = baseUrl;

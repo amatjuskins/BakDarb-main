@@ -15,11 +15,11 @@ Feature: To search cucumber in DuckDuckGo
         Then The element <Name> is found using path <path>
         Examples:
             | Name                   | path                                                                  |
-            | "Search Button"        | 'input[value="S"]'                                                    |
-            | "Search Field"         | 'input[id="search_form"]'                                             |
-            | "Logo"                 | 'input[id="logo_homepage_link"]'                                      |
-            | "Add to Chrome Button" | 'span[class="badge-link__btn btn btn--primary js-badge-link-button"]' |
-            | "Menu Button"          | 'a[class="header__button--menu  js-side-menu-open"]'                  |
+            | "Search Button"        | 'input[@value="S"]'                                                    |
+            | "Search Field"         | 'input[@id="search_form"]'                                             |
+            | "Logo"                 | 'input[@id="logo_homepage_link"]'                                      |
+            | "Add to Chrome Button" | 'span[@class="badge-link__btn btn btn--primary js-badge-link-button"]' |
+            | "Menu Button"          | 'a[@class="header__button--menu  js-side-menu-open"]'                  |
 
 
     @DuckDuckGoScenario
@@ -27,8 +27,8 @@ Feature: To search cucumber in DuckDuckGo
         Given I open <page> page
         Then The element <Name> is found using path <path>
         Examples:
-            | Name            | path                                                 | page                                         |
-            | "Search Button" | 'input[is="search_button"]'                          | "https://duckduckgo.com/?q=test&t=h_&ia=web" |
-            | "Search Field"  | 'input[name="q"]'                                    | "https://duckduckgo.com/?q=test&t=h_&ia=web" |
-            | "Logo"          | 'a[class="header__logo-wrap js-header-logo"]'        | "https://duckduckgo.com/?q=test&t=h_&ia=web" |
-            | "Menu Button"   | 'a[class="header__button--menu  js-side-menu-open"]' | "https://duckduckgo.com/?q=test&t=h_&ia=web" |
+            | Name            | path                                                  | page                                         |
+            | "Search Button" | 'input[@id="search_button_homepage"]'                 | "https://duckduckgo.com/?q=test&t=h_&ia=web" |
+            | "Search Field"  | 'input[@id="search_form_input_homepage"]'             | "https://duckduckgo.com/?q=test&t=h_&ia=web" |
+            | "Logo"          | 'a[@class="header__logo-wrap js-header-logo"]'        | "https://duckduckgo.com/?q=test&t=h_&ia=web" |
+            | "Menu Button"   | 'a[@class="header__button--menu  js-side-menu-open"]' | "https://duckduckgo.com/?q=test&t=h_&ia=web" |

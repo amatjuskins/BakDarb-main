@@ -34,5 +34,8 @@ Then('The Bing search field is empty', async function () {
     await page.locateElement(string2);
   });
 
+  Then('I click on the {string} button', async function (string){
+    await page.clickElement(string);
+});
 
  
