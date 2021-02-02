@@ -37,4 +37,3 @@ Then('The element {string} is found using path {}', async function (string1, str
 Then('I click on the {string} button', async function (string) {
   await page.clickElement(string);
 });
-

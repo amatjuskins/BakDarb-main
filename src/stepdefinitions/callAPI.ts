@@ -59,11 +59,3 @@ Then('The respose is received', function () {
     // console.log("THIS IS dt ============" + dt);
     // expect(JSON.stringify(this.response.body) === dt);
 });
-
-
-
-
-
-// Given I use get call on <url>
-// Then I get a response code <response_code>
-// And The response is <full_response>
