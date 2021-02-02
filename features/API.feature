@@ -39,9 +39,3 @@ Feature: Test API Calls on petstore.swagger.io
             | "https://petstore.swagger.io" | "/v2/user/username3"                                 |
 
 
-
-
-
-
-
-
