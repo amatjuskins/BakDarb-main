@@ -15,7 +15,7 @@ Then('{} is divided by {}', async function(var1:  any, var2: any){
 Then('I have the % of the scenario that is equal to {}', async function(var1: any){
     
     assert(((temp * 100).toFixed(2)) == var1);
-    console.log("var1=" + var1 + "  temp ="+ (temp * 100).toFixed(2))
+   // console.log("var1=" + var1 + "  temp ="+ (temp * 100).toFixed(2))
     return ((temp * 100).toFixed(2) + '%');
 })
 
