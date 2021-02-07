@@ -62,6 +62,7 @@
     "instrument": true
   },
   "dependencies": {
+    "core-js": "^3.8.3",
     "node-fetch": "^2.6.1",
     "request": "^2.88.2",
     "request-to-curl": "^0.1.6"
